@@ -23,7 +23,7 @@ class Adaptertensorflow(Modeladapter):
         default 30 epocas e tamanho 64 de batch_size, caso queira passar números diferentes para 
         o treinamento basta seguir este exemplo:
 
-        ***model.train(X=X, Y=Y, X_t=X_t, y_t=y_t,filepath=filepath ,epochs=5, batch_size=12)***
+        >>> model.train(X=X, Y=Y, X_t=X_t, y_t=y_t,filepath=filepath ,epochs=5, batch_size=12)
 
         Parâmtros:
         ---------
@@ -35,7 +35,7 @@ class Adaptertensorflow(Modeladapter):
         train_ds (np.ndarray): Dados retornados pelo train.py
         val_ds (np.ndarray): Dados tabulados de teste
 
-        filepath->str: caminho para pasta onde o modelo será salvo
+        OBS: existe um script exemplo de treinmaneto dentro da pasta examples
         """
 
         self.model.compile(optimizer='adam',loss='binary_crossentropy', metrics=[tf.keras.metrics.Precision(), tf.keras.metrics.Recall(), "accuracy"])
