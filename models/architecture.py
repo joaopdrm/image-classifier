@@ -3,8 +3,8 @@ from tensorflow.keras import Sequential, layers
 from adapter_tensorflow import Adaptertensorflow
 
 class architecture:
+    
     @staticmethod
-
     def cnn():
 
         model = model.Sequential()
