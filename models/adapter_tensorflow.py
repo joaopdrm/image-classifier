@@ -28,10 +28,12 @@ class Adaptertensorflow(Modeladapter):
         Parâmtros:
         ---------
 
-        X->np.ndarray: Argumento retornado pelo data_prep.py
-        Y->np.ndarray: Argumento retornado pelo data_prep.py
-        X_t->np.ndarray: Argumento retornado pelo data_prep.py
-        y_t->np.ndarray: Argumento retornado pelo data_prep.py
+        X (np.ndarray): Dados tabulados de treino
+        Y (np.ndarray): Dados tabulados de treino
+        X_t (np.ndarray):Dados tabulados de teste
+        y_t (np.ndarray): Dados tabulados de teste
+        train_ds (np.ndarray): Dados retornados pelo train.py
+        val_ds (np.ndarray): Dados tabulados de teste
 
         filepath->str: caminho para pasta onde o modelo será salvo
         """
