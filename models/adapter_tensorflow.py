@@ -20,10 +20,10 @@ class Adaptertensorflow(Modeladapter):
 
         """
         Esta função é responsável pelo treinamento de modelos do Keras, esta função tem como
-        default 30 epocas e tamanho 64 de batch_size, caso queira passar números diferentes para 
+        default 30 epocas e tamanho 8 de batch_size, caso queira passar números diferentes para 
         o treinamento basta seguir este exemplo:
 
-        >>> model.train(X=X, Y=Y, X_t=X_t, y_t=y_t,filepath=filepath ,epochs=5, batch_size=12)
+        >>> model.train(X=X, Y=Y, X_t=X_t, y_t=y_t,epochs=5, batch_size=12)
 
         Parâmtros:
         ---------
@@ -69,8 +69,8 @@ class Adaptertensorflow(Modeladapter):
         embeddings_metadata=None,
         )
         
-        epochs = kwargs.get("epochs", 60)  
-        batch_size = kwargs.get("batch_size", 32)
+        epochs = kwargs.get("epochs", 30)  
+        batch_size = kwargs.get("batch_size", 8)
 
         if model_type == 'image':
             self.model.fit(train_ds, epochs=epochs, batch_size=batch_size, shuffle=shuffle,
